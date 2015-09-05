@@ -479,7 +479,43 @@ footer .footer-below {
   width: 100%;
 }
 
-.drp {
-  margin: 0;
-  line-height: 2.5em;
+.extra-line-height {
+  line-height: 2em;
+}
+
+.profile-section {
+  padding-bottom: 100px;
+}
+
+.no-left-padding {
+  padding-left: 0;
+}
+
+.other-names {
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+.info-wrapper {
+    border: 1px solid #ccc;
+    padding: 30px 50px;
+    margin-top: 40px;
+}
+
+#portfolio * {
+    z-index: 0;
+}
+
+.profile-section-icon {
+  float: left;
+}
+
+.drp-header {
+  color: #AA0C0C
+}
+
+.profile-hr {
+    border-color: #ccc;
+    padding-bottom: 20px;
+    margin-top: -5px;
 }
