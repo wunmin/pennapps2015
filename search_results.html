@@ -29,6 +29,50 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Company', 'Percentage'],
+          ['Morgan Stanley',     11],
+          ['Citi',      2],
+          ['Goldman Sachs',  2],
+          ['JP Morgan', 2],
+          ['Others',    7]
+        ]);
+
+        var options = {
+          title: 'Companies',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart_company'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['DRP History', 'Percentage'],
+          ['Yes',     11],
+          ['No',      2]
+        ]);
+
+        var options = {
+          title: 'DRP History',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart_drp'));
+        chart.draw(data, options);
+      }
+    </script>
+
 </head>
 
 <body id="page-top" class="index">
@@ -97,6 +141,11 @@
                   <!-- Need a for loop here to loop through the search terms used -->
                   Search term name: Search term inputted
               </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div id="donutchart_company" class="col-lg-3" style="width: 500px; height: 300px;"></div>
+              <div id="donutchart_drp" class="col-lg-3" style="width: 500px; height: 300px;"></div>
             </div>
 
 
